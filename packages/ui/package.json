@@ -4,8 +4,9 @@
   "private": true,
   "exports": {
     "./globals.css": "./src/styles/globals.css",
-    "./button": "./src/button.tsx",
-    "./lib/*": "./src/lib/*.ts"
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts"
   },
   "scripts": {
     "generate:component": "turbo gen react-component",
