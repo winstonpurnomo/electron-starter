@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": [
+    "./node_modules/ultracite/config/oxlint/core/.oxlintrc.json",
+    "./node_modules/ultracite/config/oxlint/react/.oxlintrc.json"
+  ],
+  "rules": {
+    "eslint/complexity": "off",
+    "eslint/func-style": "off",
+    "eslint/max-classes-per-file": [
+      "error",
+      {
+        "max": 10
+      }
+    ],
+    "eslint/max-statements": "off",
+    "eslint/no-inline-comments": "off",
+    "eslint/no-negated-condition": "off",
+    "eslint/no-nested-ternary": "off",
+    "eslint/no-use-before-define": "off",
+    "eslint/sort-keys": "off",
+    "import/consistent-type-specifier-style": "off",
+    "import/no-named-as-default": "off",
+    "import/no-relative-parent-imports": "off",
+    "jest/require-hook": "off",
+    "jest/prefer-called-times": "off",
+    "jest/prefer-called-once": "off",
+    "jest/valid-title": "off",
+    "jsx_a11y/img-redundant-alt": "warn",
+    "promise/avoid-new": "off",
+    "react_perf/jsx-no-new-function-as-prop": "off",
+    "typescript/consistent-type-definitions": "off",
+    "unicorn/no-array-sort": "off",
+    // Conflicts with eslint/no-nested-ternary
+    "unicorn/no-nested-ternary": "off",
+    "unicorn/no-useless-undefined": "off",
+    "vitest/prefer-called-times": "off",
+    "vitest/prefer-called-once": "off"
+  },
+  "ignorePatterns": [
+    "**/_generated/**/*.{js,jsx,ts,tsx}",
+    "**/*.gen.{js,jsx,ts,tsx}",
+    "apps/web/.source/browser.ts"
+  ]
+}

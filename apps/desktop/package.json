@@ -1,0 +1,24 @@
+{
+  "name": "@repo/desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Electron shell for the Vite renderer",
+  "license": "ISC",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "pnpm run dev:bundle & pnpm run dev:electron",
+    "dev:bundle": "tsdown --watch",
+    "dev:electron": "node ./scripts/dev-electron.mjs",
+    "build": "tsdown",
+    "start": "node ./scripts/start-electron.mjs",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "electron": "^41.1.0",
+    "tsdown": "^0.21.6",
+    "typescript": "catalog:",
+    "wait-on": "^9.0.4"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "electron-vite",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:desktop": "turbo run dev --filter=@repo/web --filter=@repo/desktop",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "build:desktop": "turbo run build --filter=@repo/web --filter=@repo/desktop",
+    "start:desktop": "pnpm run build:desktop && pnpm --filter @repo/desktop start",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "prettier": "^3.8.1",
+    "turbo": "^2.8.21",
+    "typescript": "catalog:",
+    "ultracite": "7.3.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "pnpm dlx ultracite fix"
+    ]
+  },
+  "engines": {
+    "node": ">=25.8.1"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
