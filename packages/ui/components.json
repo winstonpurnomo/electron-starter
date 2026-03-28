@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "radix-lyra",
+  "style": "base-lyra",
   "rsc": false,
   "tsx": true,
   "tailwind": {
@@ -11,9 +11,12 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@repo/ui",
+    "components": "@repo/ui/components",
     "utils": "@repo/ui/lib/utils",
     "lib": "@repo/ui/lib",
-    "ui": "@repo/ui"
-  }
+    "ui": "@repo/ui/components"
+  },
+  "menuColor": "default-translucent",
+  "menuAccent": "subtle",
+  "rtl": false
 }
