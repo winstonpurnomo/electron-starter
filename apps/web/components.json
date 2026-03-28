@@ -16,7 +16,7 @@
     "utils": "@repo/ui/lib/utils",
     "ui": "@repo/ui/components",
     "lib": "@repo/ui/lib",
-    "hooks": "@/hooks"
+    "hooks": "@repo/ui/hooks"
   },
   "menuColor": "default-translucent",
   "menuAccent": "subtle",
